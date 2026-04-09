@@ -63,7 +63,7 @@ h4 (10.0.0.4) ─┘
 - Python 3.9
 - Ryu Controller
 
-### Step 1 — Install Mininet
+### Step 1 - Install Mininet
 ```bash
 sudo apt update
 sudo apt install mininet -y
