@@ -128,13 +128,6 @@ iperf — Throughput Testing
 ovs-ofctl — Flow table inspection
 ```
 
-### References
-```bash
-Mininet
-Ryu Framework
-OpenFlow 1.3
-```
-
 ## License
 [MIT](./LICENSE)
 
