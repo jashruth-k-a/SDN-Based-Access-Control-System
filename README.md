@@ -14,11 +14,13 @@ Implement an SDN-based access control system using Mininet and Ryu controller th
 - Verify access control and policy consistency through rigorous testing
 
 ## Network Topology
+```bash
 h1 (10.0.0.1) ─┐
 h2 (10.0.0.2) ─┤
 s1 ──── Ryu Controller
 h3 (10.0.0.3) ─┤
 h4 (10.0.0.4) ─┘
+```
 
 - **Authorized Hosts**: h1 (10.0.0.1), h2 (10.0.0.2)  
 - **Unauthorized Hosts**: h3 (10.0.0.3), h4 (10.0.0.4)
