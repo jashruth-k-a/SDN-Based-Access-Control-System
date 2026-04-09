@@ -57,13 +57,13 @@ h4 (10.0.0.4) ─┘
 - Python 3.9
 - Ryu Controller
 
-### Step 1 — Install Mininet
+### Step 1 - Install Mininet
 ```bash
 sudo apt update
 sudo apt install mininet -y
 ```
 
-### Step 2 — Install Ryu
+### Step 2 - Install Ryu
 ```bash
 sudo apt install python3.9 python3.9-venv python3.9-distutils -y
 python3.9 -m venv ~/ryu-env39
@@ -73,7 +73,7 @@ pip install eventlet==0.30.2
 pip install ryu
 ```
 
-### Step 3 — Clone Repository
+### Step 3 - Clone Repository
 ```bash
 git clone https://github.com/jashruth-k-a/SDN-Based-Access-Control-System
 cd SDN-Based-Access-Control-System
@@ -81,13 +81,13 @@ cd SDN-Based-Access-Control-System
 
 ## Execution
 
-### Terminal 1 — Start Ryu Controller
+### Terminal 1 - Start Ryu Controller
 ```bash
 source ~/ryu-env39/bin/activate
 ryu-manager access_control.py
 ```
 
-### Terminal 2 — Start Mininet Topology
+### Terminal 2 - Start Mininet Topology
 ```bash
 sudo mn -c
 sudo python3 topology.py
@@ -95,19 +95,19 @@ sudo python3 topology.py
 
 ## Test Scenarios
 
-### Scenario 1 — Authorized Communication (h1 ↔ h2)
+### Scenario 1 - Authorized Communication (h1 ↔ h2)
 ```bash
 h1 ping -c 4 h2
 ```
 Expected: 0% packet loss
 
-### Scenario 2 — Unauthorized Communication (h3 → h1)
+### Scenario 2 - Unauthorized Communication (h3 → h1)
 ```bash
 h3 ping -c 4 h1
 ```
 Expected: 100% packet loss
 
-### Scenario 3 — Throughput Test (iperf)
+### Scenario 3 - Throughput Test (iperf)
 ```bash
 # Authorized
 h2 iperf -s &
@@ -118,7 +118,7 @@ h1 iperf -s &
 h3 iperf -c h1 -t 5
 ```
 
-### Regression Test — Policy Consistency
+### Regression Test - Policy Consistency
 ```bash
 h2 ping -c 4 h3   # blocked
 h4 ping -c 4 h1   # blocked
@@ -163,5 +163,4 @@ After testing, flow table shows:
 
 ---
 
-### Built by
-[Jashruth K A](https://github.com/jashruth-k-a)
+Built by [Jashruth K A](https://github.com/jashruth-k-a)
